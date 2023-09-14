@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      html, body{
+        background: rgb(2,43,244);
+        background: linear-gradient(0deg, rgba(2,43,244,1) 0%, rgba(37,37,240,1) 47%, rgba(196,243,252,1) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    .head{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .head h1{
+      color: black;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .main{
+        width: 100%;
+        height: 90vh;
+        border-radius: 20px;
+        display: flex;
+        border: 1px solid black;
+        background-color: transparent;
+        color: black;
+        backdrop-filter: blur(10px);
+        opacity: 0.7;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main h2{
+        color: black;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .box{
+        width: 50%;
+        height: 10vh;
+        padding: 10px;
+        display: flex;
+        text-align: center;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        color: black;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    .box a{
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    </style>
+  </head>
+  <body>
+        <div class="container">
+            <div class="head">
+                <h1>Welcome, {{ username }}</h1>
+                
+            </div>
+            <div class="main">
+                <h2>Your Apps and sites...</h2>
+                <div class="box">
+                    <a href="#">go to "calculator" App</a>
+                </div>
+                <div class="box">
+                    <a href="#">go to "To-do" App</a>
+                </div>
+                <div class="box">
+                    <a href="#">go to "tribute" Page</a>
+                </div>
+                <div class="box">
+                    <a href="{% url 'logout' %}" class="btn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
